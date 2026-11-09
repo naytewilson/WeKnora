@@ -54,7 +54,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-latest
+          - os: anvil-ci-linux
             goos: linux
             goarch: amd64
           - os: ubuntu-24.04-arm
@@ -63,7 +63,7 @@ jobs:
           - os: macos-14
             goos: darwin
             goarch: amd64
-          - os: macos-14
+          - os: nayte-macos
             goos: darwin
             goarch: arm64
     runs-on: ${{ matrix.os }}
@@ -141,7 +141,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-14
+          - os: nayte-macos
             platform: darwin/universal
             arch_label: macOS_universal
             artifact_name: desktop-macos-universal
@@ -149,11 +149,11 @@ jobs:
             platform: darwin/amd64
             arch_label: macOS_amd64
             artifact_name: desktop-macos-amd64
-          - os: macos-14
+          - os: nayte-macos
             platform: darwin/arm64
             arch_label: macOS_arm64
             artifact_name: desktop-macos-arm64
-          - os: ubuntu-latest
+          - os: anvil-ci-linux
             platform: linux/amd64
             arch_label: linux_amd64
             artifact_name: desktop-linux-amd64
